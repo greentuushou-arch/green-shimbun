@@ -198,6 +198,37 @@
     z-index:1;
   }
 
+  .callout-bubble{
+    position:relative;
+    align-self:flex-start;
+    background:var(--yellow);
+    color:var(--black);
+    border:3px solid var(--black);
+    padding:.7em 1.1em;
+    font-family:var(--font-label);
+    font-size:1.12rem;
+    line-height:1.5;
+    box-shadow:5px 5px 0 var(--black);
+    margin-top:.4em;
+  }
+  .callout-bubble::after{
+    content:"";
+    position:absolute;top:-17px;left:34px;
+    width:0;height:0;
+    border:9px solid transparent;
+    border-bottom-color:var(--black);
+    border-top:0;
+  }
+  .callout-bubble::before{
+    content:"";
+    position:absolute;top:-12px;left:36px;
+    width:0;height:0;
+    border:7px solid transparent;
+    border-bottom-color:var(--yellow);
+    border-top:0;
+    z-index:1;
+  }
+
   .marker{
     background-image:linear-gradient(120deg, transparent 0%, transparent 4%, rgba(240,185,46,.55) 4%, rgba(240,185,46,.55) 96%, transparent 96%);
     padding:0 .08em;
@@ -736,6 +767,7 @@
     <div class="section-head">
       <span class="eyebrow" data-reveal="pop"><span class="num">04</span>FEATURE</span>
       <h2 class="section-title" data-reveal="up">一番大事なのは、<br class="sm-br">実はサムネイル画像！</h2>
+      <div class="callout-bubble" data-reveal="pop" style="--rot:-3deg;transition-delay:.15s;">「顔なのに、<br>その画像でいいんですか？」</div>
     </div>
 
     <div class="thumb-grid">
@@ -1021,7 +1053,7 @@
     </div>
 
     <div class="finale-bubble" data-reveal="pop">
-      <div class="speech" style="text-align:center;">役割が違うだけ。<br>だから、両方が必要なんです。</div>
+      <div class="speech" style="text-align:center;">だから、両方が必要なんです。</div>
     </div>
 
     <div class="finale-banner" data-reveal="up">
